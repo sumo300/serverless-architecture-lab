@@ -16,7 +16,7 @@ namespace TollBooth.Models
         public string fileName { get; set; }
         public string licensePlateText { get; set; }
         public DateTime timeStamp { get; set; }
-        public bool licensePlateFound { get; set; }
+        //public bool licensePlateFound { get; set; }
         public bool exported { get; set; }
     }
 }

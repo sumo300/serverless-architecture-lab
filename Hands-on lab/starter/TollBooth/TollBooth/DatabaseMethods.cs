@@ -36,6 +36,8 @@ namespace TollBooth
             var collectionLink = UriFactory.CreateDocumentCollectionUri(_databaseId, _collectionId);
             List<LicensePlateDataDocument> licensePlates;
 
+            _log.LogInformation($"{_endpointUrl} {_authorizationKey} {_databaseId} {_collectionId}");
+
             using (_client = new DocumentClient(new Uri(_endpointUrl), _authorizationKey))
             {
                 _log.LogInformation($"{_endpointUrl} {_authorizationKey} {_databaseId} {_collectionId}");

@@ -38,6 +38,7 @@ namespace TollBooth
 
             using (_client = new DocumentClient(new Uri(_endpointUrl), _authorizationKey))
             {
+                _log.LogInformation($"{_endpointUrl} {_authorizationKey} {_databaseId} {_collectionId}");
                 // MaxItemCount value tells the document query to retrieve 100 documents at a time until all are returned.
                 // TODO 5: Retrieve a List of LicensePlateDataDocument objects from the collectionLink where the exported value is false.
                 // COMPLETE: licensePlates = _client.CreateDocumentQuery ...
